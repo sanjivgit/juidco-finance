@@ -41,7 +41,7 @@ class MenuList extends Component
 
   public function render()
   {
-    $data = json_encode($this->sidebarLinks);
+    $data = json_decode(json_encode($this->sidebarLinks));
 
     return view('livewire.menu-list',['data' => $data]);
   }
