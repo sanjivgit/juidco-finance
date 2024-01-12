@@ -1,5 +1,5 @@
-@extends('layouts.base')
+@extends('layouts.app')
 
-<div class="text-green-500">
-    hello world
-</div>
+@section('content')
+    skfsldfj
+@endsection

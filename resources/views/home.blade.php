@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-<livewire:side-bar />
-<livewire:menu-list />
+Content
 @endsection
