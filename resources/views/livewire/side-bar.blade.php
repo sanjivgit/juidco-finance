@@ -16,21 +16,20 @@
                 <img src="/svg/white-arrow.svg" x-bind:class="{ 'transform rotate-180': open }" alt="">
             </summary>
 
-
             @foreach($sidebarLinks['subModules'] as $subModules)
-            <details class="my-2" x-data="{ open: false}">
-                <summary @click="open = !open" class="mx-3 cursor-pointer p-2 flex items-center justify-between" x-bind:class="{'bg-[#12743B] rounded text-white': currentPath === subPath }">
+            <details class="my-2" x-data="{ open: false }">
+                <summary @click="open = !open" class="mx-3 cursor-pointer p-2 flex items-center justify-between" x-bind:class="{'bg-[#12743B] rounded text-white': open}">
                     <div class="flex items-center">
                         <div class="bg-[#12743B] h-[31px] w-[31px] rounded-lg flex justify-center p-1 mr-2">
                             <img src={{$subModules['icon']}} alt="main-menu">
                         </div>
-                        <span x-bind:class="{'text-white': currentPath === subPath }" class="mr-2 text-[#1F2733]">{{$subModules['moduleName']}}</span>
+                        <span x-bind:class="{'text-white': open }" class="mr-2 text-[#1F2733]">{{$subModules['moduleName']}}</span>
                     </div>
-                    <img x-show="currentPath === subPath" src="/svg/white-arrow.svg" x-bind:class="{ 'transform rotate-180': open }" alt="">
-                    <img x-show="currentPath !== subPath" src="/svg/gray-arrow.svg" x-bind:class="{ 'transform rotate-180': open }" alt="">
+                    <img x-show="open" src="/svg/white-arrow.svg" x-bind:class="{ 'transform rotate-180': open }" alt="">
+                    <img x-show="!open" src="/svg/gray-arrow.svg" x-bind:class="{ 'transform rotate-180': open }" alt="">
                 </summary>
                 @foreach($subModules['subModules'] as $subModule)
-                <div x-data="{ subPath: '{{$subModules['path']}}' }" class="mx-7 flex items-center">
+                <div x-data="{ subPath: '{{$subModule['path']}}' }" class="mx-7 flex items-center">
                     <a href={{$subModule['path']}}>
                         {{-- <img src={{$subModule['icon']}} alt=""> --}}
                         <span class="text-black">{{$subModule['moduleName']}}</span>
