@@ -6,6 +6,11 @@ module.exports = {
             fontFamily: {
                 sans: ['Inter var', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                primary: "#3A3838",
+                secondary: "#4F4F55",
+                primary_green: "#12743B",
+              },
         },
     },
     variants: {

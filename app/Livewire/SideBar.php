@@ -13,7 +13,7 @@ class SideBar extends Component
     'subModules' => [
       [
         'moduleName' => 'Masters',
-        'icon' => '/svg/home.svg',
+        'icon' => '/svg/masters.svg',
         // 'path' => '/finance/masters/chart-of-account',
         // 'paths' => ['/finance/masters/chart-of-account', '/finance/masters/bank-master', '/finance/masters/vendor', '/finance/masters/workorder', '/finance/masters/chequebook'],
         'subModules' => [
@@ -26,7 +26,7 @@ class SideBar extends Component
       ],
       [
         'moduleName' => 'Documentation & Record Keeping',
-        'icon' => '/svg/home.svg',
+        'icon' => '/svg/doc.svg',
         // 'path' => '/finance/masters/chart-of-account',
         // 'paths' => ['/finance/masters/chart-of-account', '/finance/masters/bank-master', '/finance/masters/vendor', '/finance/masters/workorder', '/finance/masters/chequebook'],
         'subModules' => [

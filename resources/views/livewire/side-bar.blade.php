@@ -21,7 +21,7 @@
                 <summary @click="open = !open" class="mx-3 cursor-pointer p-2 flex items-center justify-between" x-bind:class="{'bg-[#12743B] rounded text-white': open}">
                     <div class="flex items-center">
                         <div class="bg-[#12743B] h-[31px] w-[31px] rounded-lg flex justify-center p-1 mr-2">
-                            <img src={{$subModules['icon']}} alt="main-menu">
+                            <img class="w-full h-full object-contain" src={{$subModules['icon']}} alt="main-menu">
                         </div>
                         <span x-bind:class="{'text-white': open }" class="mr-2 text-[#1F2733]">{{$subModules['moduleName']}}</span>
                     </div>
@@ -30,7 +30,7 @@
                 </summary>
                 @foreach($subModules['subModules'] as $subModule)
                 <div x-data="{ subPath: '{{$subModule['path']}}' }" class="mx-7 flex items-center">
-                    <a href={{$subModule['path']}}>
+                    <a href={{$subModule['path']}} class="mt-2 pl-8">
                         {{-- <img src={{$subModule['icon']}} alt=""> --}}
                         <span class="text-black">{{$subModule['moduleName']}}</span>
                     </a>

@@ -1,11 +1,11 @@
 @extends('layouts.base')
 
 @section('body')
-<div class="flex">
+<div class="flex" >
     <livewire:side-bar />
-    <div>
+    <div class="w-lvw">
         <header>
-            Header Content
+            <livewire:header />
         </header>
         <main>
             @yield('content')
